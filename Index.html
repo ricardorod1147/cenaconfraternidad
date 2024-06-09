@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Estilos.css">
+    <script src="./App.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>CONFRATERNIDAD</title>
+</head>
+
+<body>
+    <div style="width: 100%; background-color: rgb(254, 185, 65, 0.1); padding: 2rem;">
+        <div style="width: 100%; display: flex;">
+            <button class="boton-bonito" onclick="MostrarModalRegistro()">+</button>
+            <h1 style="text-align: center; width: 100%;" class="raleway">
+                CENA PRO-RECLUSO</h1>
+        </div>
+            
+        <p class="texto_normal" id="pr"></p>
+        <h2
+            style="color:rgb(140, 51, 51); text-align: center; text-align: center; width: 100%;" class="raleway">
+            CONFRATERNIDAD CARCELARIA DE COLOMBIA</h2>
+    
+        <div style="display: flex; justify-content: start;">
+    
+            <button class="boton-bonito" onclick="Seleccionar()">Seleccionar</button>
+        </div>
+    
+        <!-- <h3
+            style="text-align: center; width: 100%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(15, 44, 89);">
+            Boletas participantes</h3> -->
+    <br>
+    </div>
+    
+    <div id="container_numeros" class="container-numeros">
+
+    </div>
+
+    <div id="contai-mensaje" class="container-mensaje">
+        <div id="tar-mensaje" class="target-mensaje">
+            <h1 style="text-align: center;">El ganador es: </h1>
+            <div id="celebration-div" class="animacion-div">
+                <p id="lbl-mensaje" style="width: 100%; display: flex; justify-content: center; font-size: large; font-size:5rem; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem; margin-top: 3rem;">
+                <button class="boton-bonito" onclick="CerrarModal('contai-mensaje')">Continuar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contai-ingreso-numeros" class="container-mensaje">
+        <div id="tar-mensaje" class="target-mensaje">
+            <h1 style="text-align: center;">Por favor registre los nùmeros que participan, separados con una coma (,) : </h1>
+            <div id="celebration-div" class="numeros-registra">
+                <textarea name="numerosparticipa" id="numeros_ingresados" placeholder="Números de sorteo" style="width: 90%; height: 8rem; border-radius: 20px; padding: 2rem;" ></textarea> 
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem; margin-top: 3rem;">
+                <button class="boton-bonito" onclick="CerrarModal('contai-ingreso-numeros')">Cancelar</button>
+                <button class="boton-bonito" onclick="GenerarNumeros('contai-ingreso-numeros')">Ingresar nùmeros</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contai-error" class="container-mensaje">
+        <div id="tar-mensaje-error" class="target-mensaje">
+            <h1 id="mensaje_error-error" style="text-align: center;">Error : </h1>
+            <!-- <div id="celebration-div-error" class="numeros-registra">
+              
+            </div> -->
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem; margin-top: 3rem;">
+                <button class="boton-bonito" onclick="CerrarModal('contai-error')">Aceptar</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
