@@ -194,7 +194,8 @@ function launchConfetti() {
 const CerrarModal=(modal)=>{
     try {
         let divcontainer = document.getElementById(modal);
-        divcontainer.style.visibility="collapse";  
+        divcontainer.style.visibility="collapse"; 
+        numeros_ingresados.value = ""; 
     } catch (error) {
         
     }
