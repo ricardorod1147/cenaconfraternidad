@@ -42,6 +42,19 @@ const MostrarModalRegistro =()=>{
 //Función que genera los números
 const GenerarNumeros = () => {
   try {
+
+    const numerosTexto = document.getElementById('numeros_ingresados');
+    const textoMensaje = document.getElementById('textonum');
+    
+    if(numerosTexto.value.trim()==""){
+      textoMensaje.style.color = "red";
+      return;
+    }
+    textoMensaje.style.color = "black";
+    
+    const btnSeleccionar = document.getElementById('id_div_boton');
+btnSeleccionar.style.display = "flex";
+
     NumeroFichas();
     
     //Obtener la cadena de texto en formato JSON del localStorage y convertirla de vuelta al arreglo original
@@ -188,6 +201,12 @@ function launchConfetti() {
   });
 }
 
+const cerrarModalAceptar = ()=>{
+  document.getElementById('id_div_boton').style.display="none";
+  document.getElementById('pr').innerHTML=""
+  ;
+  CerrarModal('contai-error');
+}
 
 
 
@@ -196,6 +215,7 @@ const CerrarModal=(modal)=>{
         let divcontainer = document.getElementById(modal);
         divcontainer.style.visibility="collapse"; 
         numeros_ingresados.value = ""; 
+        document.getElementById('textonum').style.color = 'black';
     } catch (error) {
         
     }
@@ -214,6 +234,20 @@ const MostrarError =(mensa)=>{
   CerrarModal('contai-mensaje');
 
 }
+
+// document.getElementById('numeros_ingresados').addEventListener('input', function (e) {
+//   this.value = this.value.replace(/[^0-9,]/g, '');
+// });
+
+const validaNumerosComa = (e) => {
+  const charCode = e.charCode || e.keyCode || e.which;
+  const charStr = String.fromCharCode(charCode);
+
+  // Verifica si el carácter ingresado no es un número o una coma
+  if (!/[0-9,]/.test(charStr)) {
+      e.preventDefault(); // Previene la inserción del carácter no válido
+  }
+};
 
 
 
