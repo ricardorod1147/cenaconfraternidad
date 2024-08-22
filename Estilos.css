@@ -1,7 +1,7 @@
-body{
-margin: 0rem;
-padding: 0rem;
-background-color: var(--main-bg-color);
+body {
+  margin: 0rem;
+  padding: 0rem;
+  background-color: var(--main-bg-color);
 }
 
 :root {
@@ -9,64 +9,80 @@ background-color: var(--main-bg-color);
   --dorado: rgb(255, 175, 0);
 }
 
-.header{
-  width: 100%; 
+.header {
+  width: 100%;
   background-color: var(--main-bg-color);
-  color: white; 
-  padding: 2rem; 
+  color: white;
+  padding: 2rem;
   font: raleway-roboto-thin-italic;
 }
 
-.title-header{
-  width: 100%; 
-  display: flex; 
+.title-header {
+  width: 100%;
+  display: flex;
   position: relative;
 }
 
-.position-end-rela{
-  position: relative; 
-  top:2rem; left: 85%;
+.position-end-rela {
+  position: relative;
+  top: 5rem;
+  left: 76.55%;
+  width: 8rem;
+}
+
+.position-end-rela-help {
+  position: relative;
+  top: 0.5rem;
+  left: 85%;
+  width: 8rem;
 }
 
 
-.container-numeros{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    background-color: var(--main-bg-color);
+.position-end-rela-seleccionar {
+  position: relative;
+  top: 2rem;
+  left: 85%;
 }
 
-.container-mensaje{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--main-bg-color);
-    visibility: collapse;
-    
+.container-numeros {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: var(--main-bg-color);
 }
 
-.target-mensaje{
-    border-radius: 10px;;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5rem;
-    width: 80%;
-    color: white;
-    height: max-content;
-    background-color: rgb(2, 21, 38);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+.container-mensaje {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--main-bg-color);
+  visibility: collapse;
+
 }
 
-.numeros-registra{
+.target-mensaje {
+  border-radius: 10px;
+  ;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  width: 80%;
+  color: white;
+  height: max-content;
+  background-color: var(--main-bg-color);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.numeros-registra {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,84 +90,89 @@ background-color: var(--main-bg-color);
   height: 15rem;
 }
 
-.numero-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin: 0.2rem;
-    width: 5rem;
-    height: 3rem;
-    background-color: var(--dorado);
-    color: black;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+.numero-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0.2rem;
+  width: 5rem;
+  height: 3rem;
+  background-color: var(--dorado);
+  color: black;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.numero-div:hover{
+.numero-div:hover {
   background-color: rgb(61, 12, 17);
   cursor: pointer;
   color: white;
 }
 
-/* .btn-generar{
-    background-color: rgba(149, 35, 35, 0.5);
-} */
 
-
-.raleway-roboto-thin-italic{
-    font-family: "Raleway", sans-serif;
+.raleway-roboto-thin-italic {
+  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  color: white;
 }
+
 /* Estilos para el botón */
 .boton-bonito {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--dorado);
-    color: black;
-    border-radius: 4px;
-    border: none;
-    transition: background-color 0.3s ease;
-    margin-left: 2rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .texto_normal{
-    font-size:larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
-  .boton-bonito:hover {
-    background-color: rgb(130, 0, 0,1);
-    color: white;
-  }
-  
-  .boton-bonito:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
-  }
-  
-  .boton-bonito:active {
-    background-color: #3e8e41;
-  }
-  
-  /* Estilos para un botón grande */
-  .boton-bonito-grande {
-    font-size: 20px;
-    padding: 15px 30px;
-  }
-  
-  /* Estilos para un botón pequeño */
-  .boton-bonito-pequeno {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-  
-  /* .boton-generar{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--dorado);
+  color: rgb(130, 0, 0, 1);
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-left: 2rem;
+}
+
+.boton-bonito span {
+  margin-right: 1rem;
+}
+
+.texto_normal {
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.boton-bonito:hover {
+  background-color: rgb(130, 0, 0, 1);
+  color: white;
+}
+
+.boton-bonito:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.boton-bonito:active {
+  background-color: #3e8e41;
+}
+
+/* Estilos para un botón grande */
+.boton-bonito-grande {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+/* Estilos para un botón pequeño */
+.boton-bonito-pequeno {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* .boton-generar{
     background-color: rgba(149, 35, 35,0.9);
     color: #FFFFFF;
     border: none;
@@ -166,7 +187,7 @@ background-color: var(--main-bg-color);
   } */
 
 
-  /* Estilo base del div */
+/* Estilo base del div */
 .animacion-div {
   display: flex;
   justify-content: center;
@@ -180,13 +201,15 @@ background-color: var(--main-bg-color);
 /* Definición de la animación con @keyframes */
 @keyframes cambioDeColor {
   0% {
-      background-color: rgb(168, 223, 142);
+    background-color: rgb(168, 223, 142);
   }
+
   50% {
-      background-color: rgb(232, 106, 51);
+    background-color: rgb(232, 106, 51);
   }
+
   100% {
-      background-color: rgb(255, 177, 0);
+    background-color: rgb(255, 177, 0);
   }
 }
 

@@ -1,4 +1,3 @@
-
 //Arreglo de numeros totales
 //let arregloNumerosTotales = [149,21,90,97,99,98,96,95,94,93,92,91,200,140,80,20,135,189,123,163,215,115,188,198,72,150,160,26,27,113,167,168,213,211,73,197,191,192,196,182,199,206,217,194,128,183,18,19,65,89,129,136,134,179,171,68,176,152,195,85,194,217,127,151,248,249,247,193,165,161,144,34,124,239,240,241,243,245,244,246,56,57,102,103,104,105,106,133,205,81,82,52,238,148,237,181,157,156,154,66,37,42,38,44,48,25,24,79,84,225,61,62,63,224,223,222,221,22,181,31,30,219,178,212,138,155,137,242,59,112,111,114,226,145,227,29,185,208,43,228,130,40,39,254,251,119,121,142,108,166,252,250,236,235,229,232,233,234,2,1,120,147,231,230,122,35,36,253,187,210,186,100,101,255,86,175,261,190,33,169,203,264,265,266,109,204,207,159,180,28,218,216,162,202,267,214];
 
@@ -33,9 +32,9 @@ const NumeroFichas =()=>{
 
 }
 
-
-const MostrarModalRegistro =()=>{
-      let divcontainer = document.getElementById('contai-ingreso-numeros');
+//Muestra el modal del registro 
+const MostrarModalRegistro = id_modal=>{
+      let divcontainer = document.getElementById(id_modal);
       divcontainer.style.visibility="visible";  
 }
 
@@ -133,6 +132,8 @@ const Seleccionar = ()=>{
     }
 }
 
+
+//Funciòn que va arrojando a la consola los nùmeros restantes dado el caso de error
 const ExportarConsola=(numeros)=>{
     try {
         var salida = "";
@@ -201,6 +202,7 @@ function launchConfetti() {
   });
 }
 
+//Funciòn que cierra el modal del mensaje
 const cerrarModalAceptar = ()=>{
   document.getElementById('id_div_boton').style.display="none";
   document.getElementById('pr').innerHTML=""
@@ -209,7 +211,7 @@ const cerrarModalAceptar = ()=>{
 }
 
 
-
+//Funciòn que cierra el modal del mensaje
 const CerrarModal=(modal)=>{
     try {
         let divcontainer = document.getElementById(modal);
@@ -222,7 +224,7 @@ const CerrarModal=(modal)=>{
 }
 
 
-
+//Funciòn que muestra mensaje de error
 const MostrarError =(mensa)=>{
   let divcontainer = document.getElementById('contai-error');
   let mensaje_error = document.getElementById('mensaje_error-error');
@@ -239,6 +241,7 @@ const MostrarError =(mensa)=>{
 //   this.value = this.value.replace(/[^0-9,]/g, '');
 // });
 
+//Funciòn que solo permite nùmeros y el caracter , en el input de ingreso de los nùmeros
 const validaNumerosComa = (e) => {
   const charCode = e.charCode || e.keyCode || e.which;
   const charStr = String.fromCharCode(charCode);
