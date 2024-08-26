@@ -24,31 +24,41 @@
 
 <body>
     <header class="header">
-        <div class="title-header">
-            <button class="boton-bonito position-end-rela-help" onclick="MostrarModalRegistro('contai-help')">
+        <div class="title-header" >
+            <button class="boton-bonito" onclick="MostrarModalRegistro('contai-help')">
                 <span class="material-symbols-outlined">
                     help
                 </span>
                 Ayuda</button>
-            <button class="boton-bonito position-end-rela" onclick="MostrarModalRegistro('contai-ingreso-numeros')">
+                
+            <button class="boton-bonito" onclick="NuevoJuego()">
                 <span class="material-symbols-outlined">
                     flag_2
                 </span>
-                Nuevo</button>
-            <h2 style="text-align: center; color: var(--dorado);" class="raleway kanit-regular-italic">
-                CENA PRO-RECLUSO</h2>
+                Nuevo</button> 
         </div>
+        <div class="typewriter">
+            <p>Hebreos 13:3 Acuérdense de aquellos que están en prisión, como si ustedes mismos estuvieran allí.</p>
+        </div>
+        
 
-        <p class="texto_normal" style="color: var(--dorado)" id="pr"></p>
-        <h1 style="text-align: center;" class="kanit-semibold-italic">
+        <p id="title-sub" style="text-align: center; width: 100%; font-size: 1.8rem; color: var(--dorado);" class="raleway kanit-regular-italic">
+            CENA PRO-RECLUSO</p>
+        <p class="texto_normal" style="color: var(--dorado);" id="pr"></p>
+        <h1 style="text-align: center; width: 100%;" class="kanit-semibold-italic">
             CONFRATERNIDAD CARCELARIA DE COLOMBIA</h1>
 
-        <div id="id_div_boton" style="display: none; justify-content: start;">
-            <button id="btn_seleccionar" class="boton-bonito position-end-rela-seleccionar" onclick="Seleccionar()">
+        <div id="id_div_boton" style="display: none; justify-content: space-evenly;">
+            <button id="btn_seleccionar" class="boton-bonito" onclick="Seleccionar()">
                 <span class="material-symbols-outlined">
                     group_add
                 </span>
                 Seleccionar</button>
+                <button id="btn_editar" class="boton-bonito" onclick="MostrarModalRegistro('contai-ingreso-numeros')">
+                    <span class="material-symbols-outlined">
+                        edit
+                    </span>
+                    Editar</button>
         </div>
 
         <br>
@@ -92,7 +102,7 @@
                         cancel
                     </span>
                     Cancelar</button>
-                <button class="boton-bonito" onclick="GenerarNumeros('contai-ingreso-numeros')">
+                <button class="boton-bonito" onclick="GenerarNumeros()">
                     <span class="material-symbols-outlined">
                         save_as
                     </span>

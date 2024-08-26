@@ -22,15 +22,26 @@ let arregloNumerosTablero = [];
 
 ///Toma el valor de los datos ingresados y los carga en el arreglo del localstorage
 const NumeroFichas =()=>{
-  let valor = document.getElementById('pr');
   let textTarea = document.getElementById('numeros_ingresados');
   
-   arregloNumerosTotales = textTarea.value.split(',');
-   GuardaArr();
-   valor.innerHTML= `Total de fichas ${arregloNumerosTotales.length}`;
-
+  arregloNumerosTotales = textTarea.value.split(',');
+  GuardaArr();
 
 }
+
+// const EditarNumeros = () =>{
+//   ffffffffffffffffffffffffffffffffffffffffffffffff
+
+
+//   numeros_ingresados.document.getElementById();
+//   MostrarModalRegistro('contai-ingreso-numeros')
+// }
+
+const NuevoJuego = () =>{
+  document.getElementById('numeros_ingresados').value = "";
+  MostrarModalRegistro('contai-ingreso-numeros');
+}
+
 
 //Muestra el modal del registro 
 const MostrarModalRegistro = id_modal=>{
@@ -49,6 +60,7 @@ const GenerarNumeros = () => {
       textoMensaje.style.color = "red";
       return;
     }
+
     textoMensaje.style.color = "black";
     
     const btnSeleccionar = document.getElementById('id_div_boton');
@@ -72,6 +84,8 @@ btnSeleccionar.style.display = "flex";
       
       arregloNumerosTotales = [...numeros];
       var numerosJSON = JSON.stringify(arregloNumerosTotales);
+      let valor = document.getElementById('pr');
+      valor.innerHTML= `Total de fichas ${arregloNumerosTotales.length}`;
       localStorage.setItem("arregloNumerosTotales", numerosJSON);
       
       CerrarModal('contai-ingreso-numeros');
@@ -92,6 +106,10 @@ const ImprimirNumeros = (arregloNumerosTablero) => {
             containernumeros.appendChild(divNumero);
         }
     });
+
+    let valor = document.getElementById('pr');
+    valor.innerHTML= `Total de fichas ${asalidaArr.length}`;
+
   } catch (error) {}
 };
 
@@ -112,6 +130,7 @@ const Seleccionar = ()=>{
       let numeroElementos = Math.floor(Math.random() * numeros.length);
     //   console.log(numeroElementos);
     //   console.log(numeros[numeroElementos]);
+
     MostarModalNumeroGanador(numeros[numeroElementos]);
      
     
@@ -142,7 +161,9 @@ const ExportarConsola=(numeros)=>{
             salida += numeros[i] + ",";
           }
         }
+        const salidaArr = salida.split(',');
         console.log(salida);
+        document.getElementById('numeros_ingresados').value = salida;
     } catch (error) {
         
     }
@@ -216,7 +237,7 @@ const CerrarModal=(modal)=>{
     try {
         let divcontainer = document.getElementById(modal);
         divcontainer.style.visibility="collapse"; 
-        numeros_ingresados.value = ""; 
+        //numeros_ingresados.value = ""; 
         document.getElementById('textonum').style.color = 'black';
     } catch (error) {
         

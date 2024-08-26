@@ -18,30 +18,30 @@ body {
 }
 
 .title-header {
-  width: 100%;
+  width: 90%;
   display: flex;
-  position: relative;
+  justify-content: end;
 }
 
-.position-end-rela {
+/* .position-end-rela {
   position: relative;
   top: 5rem;
-  left: 76.55%;
+  left: 40%;
   width: 8rem;
 }
 
 .position-end-rela-help {
   position: relative;
   top: 0.5rem;
-  left: 85%;
+  left: 40%;
   width: 8rem;
-}
+} */
 
 
 .position-end-rela-seleccionar {
   position: relative;
   top: 2rem;
-  left: 85%;
+  left: 70%;
 }
 
 .container-numeros {
@@ -123,7 +123,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  height: 2.5rem;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
@@ -393,4 +393,25 @@ body {
   font-family: "Kanit", sans-serif;
   font-weight: 900;
   font-style: italic;
+}
+
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 33s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
 }
