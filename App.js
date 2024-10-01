@@ -126,10 +126,10 @@ const GenerarNumeros = () => {
 
     arregloNumerosTotales = [...numeros];
     var numerosJSON = JSON.stringify(arregloNumerosTotales);
-    TotalFichas();
     localStorage.setItem("arregloNumerosTotales", numerosJSON);
-
+    
     CerrarModal('contai-ingreso-numeros');
+    TotalFichas();
 
 
   } catch (error) { }
