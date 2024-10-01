@@ -5,7 +5,8 @@ body {
 }
 
 :root {
-  --main-bg-color: rgb(19, 75, 112);
+  /* --main-bg-color: rgb(19, 75, 112); */
+  --main-bg-color: rgb(11, 25, 44);
   --dorado: rgb(255, 175, 0);
 }
 
@@ -69,14 +70,12 @@ body {
 
 .target-mensaje {
   border-radius: 10px;
-  ;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 5rem;
   width: 80%;
-  color: white;
   height: max-content;
   background-color: var(--main-bg-color);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
@@ -94,17 +93,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 0.2rem;
   width: 5rem;
   height: 3rem;
   background-color: var(--dorado);
-  color: black;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .numero-div:hover {
-  background-color: rgb(61, 12, 17);
+  /* background-color: rgb(61, 12, 17); */
+  background-color: rgb(192, 127, 0);
   cursor: pointer;
   color: white;
 }
@@ -147,7 +146,7 @@ body {
 }
 
 .boton-bonito:hover {
-  background-color: rgb(130, 0, 0, 1);
+  background-color: rgb(192, 127, 0);
   color: white;
 }
 
@@ -415,3 +414,5 @@ body {
   from, to { border-color: transparent; }
   50% { border-color: black; }
 }
+
+
